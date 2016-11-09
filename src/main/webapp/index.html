@@ -1,0 +1,173 @@
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Calibri;
+        font-size: 18px;
+    }
+    
+    header {
+        height: 80px;
+        box-shadow: 2px 2px 2px #555;
+        margin-bottom: 5px;
+        box-sizing:border-box;
+        background: #0e8dbc;
+    }
+    
+    ul,
+    li {
+        list-style: none;
+    }
+    
+    ul.inner {
+        display: none;
+    }
+    
+    ul.inner li {
+        display: inline-block;
+        margin: 5px;
+    }
+    
+    ul.inner li:first-child {
+        border-right: 1px solid #555;
+        padding-right: 10px;
+    }
+    
+    .show {
+        display: inline-block;
+    }
+    
+    .hide {
+        display: none;
+    }
+    
+    .show_hide {
+        display: none;
+    }
+    
+    .data_container_hide {
+        display: none;
+    }
+    
+    ul.outer img {
+        height: 12px;
+        width: 12px;
+    }
+    ul.outer{
+    	/*display: none;*/
+    }
+    .err{
+    	color:red;
+    }
+    
+    .img-icon,.root-span {
+        height: 12px;
+        width: 12px;
+        display: inline-block;
+    }
+    
+    .collapse {
+        background-image: url('images/collapse.png');
+        background-size: 12px 12px;
+    }
+    
+    .expand {
+        background-image: url('images/expand.png');
+        background-size: 12px 12px;
+    }
+    
+    a.label {
+        padding: 0px 10px;
+        text-decoration: none;
+        color: #555;
+        transition: background-color 1s ease;
+    }
+    
+    a.label:hover {
+        background-color: #3498db;
+        color: #fff;
+        box-shadow: 1px 2px 3px #555;
+    }
+    
+    a.label:active {
+        box-shadow: none;
+    }
+    
+    ul ul {
+        margin: 0;
+        padding-top: 14px;
+        padding-left: 20px;
+        font-size: 14px;
+    }
+    
+    #container,
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    button {
+        border: none;
+        outline: none;
+        padding: 3px 15px;
+        cursor: pointer;
+        background-color: #2980b9;
+        color: #fff;
+        box-shadow: 1px 2px 3px #555;
+    }
+    
+    button:active {
+        color: #2c3e50;
+        background-color: #95a5a6;
+        box-shadow: none;
+    }
+    
+    .placeholder {
+        font-size: 14px;
+        /*border: 1px solid;*/
+        position: relative;
+        right: 215px;
+    }
+    #filter{
+    	padding-left: 40px;
+    }
+    header h3{
+    	font-style: italic;
+    	text-align: center;
+    	font-size: 46px;    	
+    color: white;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15)
+
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="js/script_xml.js"></script>
+</head>
+
+<body>
+    <header>
+    	<h3>D&B Internal Services</h3>
+    </header>
+    <p class="container"> DNBProductID =
+        <input type="text" name="DNBProductID_ip" value="DCP_PREM">
+        <button id="DNBProductID_bt" type="button">Submit</button>
+        <button id="Clear_bt" type="button">Clear</button>
+    </p>
+    <div class="data_container_hide container" style="margin-top:25px;">
+        <button type="button" id="expand" class="data_container_hide">Expand All</button>
+        <button type="button" id="collapse" class="data_container_hide">Collapse All</button>
+        <label> Filter Tree: </label>
+        <input type="text" id="filter">
+        <label class="placeholder">XPath: </label>
+        <!--  <button type="button" id="search">Search</button> -->
+        <div id="container" class="data_container_hide"></div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>

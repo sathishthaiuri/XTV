@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>ERFP Application</title>
+	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="./css/style.css">
+	
+	<style>
+		div.groove {
+			border-style: groove;
+		}
+	</style>
+</head>
+
+<body>
+	<script>
+		function redirectURL(sw) {
+		    document.getElementById('loginForm').action = "http://"+window.location.host+"/erfp/dashboardScreen.html"
+		}
+	</script>
+	
+	<div align="center">
+		<h2>Enterprise Risk Framework Portal (ERFP)</h2>
+	</div>
+	<br><br><br><br><br>
+
+	<table border="0" style="width:100%">
+		<tr>
+			<td width="20%"></td>
+			<td width="60%">
+				<img width="" height="" alt="" src="./images/categoriesLoginSnap.png">
+			</td>
+			<td width="20%">
+				<div class="container">
+					<section id="content">
+						<form id="loginForm" onsubmit="redirectURL()" method="post">
+							<h1>Login Form</h1>
+							<div>
+								<input type="text" placeholder="Username" required=""
+									id="username" value="presenter@dnb.com" />
+							</div>
+							<div>
+								<input type="password" placeholder="Password" required=""
+									id="password" value="12345678" />
+							</div>
+							<div>
+								<input type="submit" value="Log in" width="30" /> <a href="#">Lost
+									your password?</a> <a href="#">Register</a>
+							</div>
+						</form>
+						<!-- form -->
+						<div class="button">
+							<a href="#">Download White Papers</a>
+						</div>
+						<!-- button -->
+					</section>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>
